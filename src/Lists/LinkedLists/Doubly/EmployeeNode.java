@@ -3,8 +3,8 @@ package Lists.LinkedLists.Doubly;
 public class EmployeeNode {
 
     private Employee employee;
-    private EmployeeNode next;
-    private EmployeeNode previous;
+    private EmployeeNode nextNode;
+    private EmployeeNode previousNode;
 
     public EmployeeNode(Employee employee) {
         this.employee = employee;
@@ -18,20 +18,20 @@ public class EmployeeNode {
         this.employee = employee;
     }
 
-    public EmployeeNode getNext() {
-        return next;
+    public EmployeeNode getNextNode() {
+        return nextNode;
     }
 
-    public void setNext(EmployeeNode next) {
-        this.next = next;
+    public void setNextNode(EmployeeNode nextNode) {
+        this.nextNode = nextNode;
     }
 
-    public EmployeeNode getPrevious() {
-        return previous;
+    public EmployeeNode getPreviousNode() {
+        return previousNode;
     }
 
-    public void setPrevious(EmployeeNode previous) {
-        this.previous = previous;
+    public void setPreviousNode(EmployeeNode previousNode) {
+        this.previousNode = previousNode;
     }
 
     @Override

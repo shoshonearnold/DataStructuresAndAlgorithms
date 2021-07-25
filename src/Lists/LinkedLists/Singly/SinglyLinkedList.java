@@ -24,7 +24,6 @@ public class SinglyLinkedList {
         return removedNode;
     }
 
-
     public int getSize() {
         return size;
     }
@@ -37,9 +36,10 @@ public class SinglyLinkedList {
         EmployeeNode current = head;
         while (current != null) {
             System.out.print(current);
-            System.out.print(" ->");
+            System.out.print(" -> ");
             current = current.getNext();
         }
         System.out.print(" null");
     }
+
 }

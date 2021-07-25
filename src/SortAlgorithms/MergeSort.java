@@ -7,14 +7,14 @@ public class MergeSort {
             return;
         }
 
-        int mid = (start + end) / 2;
+        int mid = (end + start) / 2;
         mergeSort(array, start, mid);
         mergeSort(array, mid, end);
         merge(array, start, mid, end);
     }
 
     public static void merge(int[] array, int start, int mid, int end) {
-        if (array[mid] >= array[mid - 1]) {
+        if (array[mid - 1] <= array[mid]) {
             return;
         }
 
@@ -26,12 +26,12 @@ public class MergeSort {
             temp[tempIndex++] = array[i] <= array[j] ? array[i++] : array[j++];
         }
 
-        System.arraycopy(array, start, array, start + tempIndex, mid - i);
+        System.arraycopy(array, i, array, start + tempIndex, mid - i);
         System.arraycopy(temp, 0, array, start, tempIndex);
     }
 
     public static void main(String[] args) {
-        int[] givenArray = {54, -34, 6, 99, 876, 2, 55};
+        int[] givenArray = { 78, 43, 90, 12, 2, 1, -8};
         mergeSort(givenArray, 0, givenArray.length);
         for (int i = 0; i < givenArray.length; i++) {
             System.out.println(givenArray[i]);

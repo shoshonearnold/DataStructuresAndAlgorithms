@@ -2,18 +2,10 @@ package Lists.LinkedLists.Singly;
 
 public class EmployeeNode {
 
-    private Employee employee;
     private EmployeeNode next;
+    private Employee employee;
 
     public EmployeeNode(Employee employee) {
-        this.employee = employee;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
         this.employee = employee;
     }
 
@@ -23,6 +15,14 @@ public class EmployeeNode {
 
     public void setNext(EmployeeNode next) {
         this.next = next;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     @Override

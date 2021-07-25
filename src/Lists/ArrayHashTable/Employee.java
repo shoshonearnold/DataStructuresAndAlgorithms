@@ -1,4 +1,4 @@
-package Lists.LinkedLists.Singly;
+package Lists.ArrayHashTable;
 
 import java.util.Objects;
 
@@ -43,9 +43,7 @@ public class Employee {
         if (this == o) return true;
         if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
-        return getId() == employee.getId() &&
-                getFirstName().equals(employee.getFirstName()) &&
-                getLastName().equals(employee.getLastName());
+        return getId() == employee.getId() && getFirstName().equals(employee.getFirstName()) && getLastName().equals(employee.getLastName());
     }
 
     @Override

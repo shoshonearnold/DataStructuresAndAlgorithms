@@ -13,10 +13,10 @@ public class InsertionSort {
     }
 
     public static void insertionSort() {
-        int[] givenArray = {54, -34, 6, 99, 876, 2, 55};
-        for (int lastUnsortedIndex = givenArray.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
+        int[] givenArray = { 78, 43, 90, 12, 2, 1, -8};
+        for (int lastUnsortedIndex = givenArray.length -1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
             int largest = 0;
-            for (int i = 1; i <= lastUnsortedIndex; i++) {
+            for (int i = 0; i <= lastUnsortedIndex; i++) {
                 if (givenArray[i] > givenArray[largest]) {
                     largest = i;
                 }
@@ -26,10 +26,7 @@ public class InsertionSort {
         for (int i = 0; i < givenArray.length; i++) {
             System.out.println(givenArray[i]);
         }
-
     }
-
-
 
     public static void main(String[] args) {
         insertionSort();

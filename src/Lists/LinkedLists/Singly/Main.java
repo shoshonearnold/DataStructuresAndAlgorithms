@@ -3,16 +3,13 @@ package Lists.LinkedLists.Singly;
 public class Main {
 
     public static void main(String[] args) {
-
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        SinglyLinkedList list = new SinglyLinkedList();
 
         Employee janeJones = (new Employee("jane", "jones", 123));
-        Employee jimJones = (new Employee("JIm", "JOnes", 456));
+        Employee jimJones = (new Employee("jim", "jones", 456));
 
-        singlyLinkedList.addToFront(janeJones);
-        singlyLinkedList.addToFront(jimJones);
-        //singlyLinkedList.printList();
-        singlyLinkedList.removeFromFront();
-        singlyLinkedList.printList();
+        list.addToFront(janeJones);
+        list.addToFront(jimJones);
+        list.printList();
     }
 }

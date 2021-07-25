@@ -1,7 +1,8 @@
 package Lists.LinkedLists.Doubly;
 
-public class Employee {
+import java.util.Objects;
 
+public class Employee {
     private String firstName;
     private String lastName;
     private int id;
@@ -39,21 +40,14 @@ public class Employee {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
+        if (!(o instanceof Employee)) return false;
         Employee employee = (Employee) o;
-
-        if (id != employee.id) return false;
-        if (!firstName.equals(employee.firstName)) return false;
-        return lastName.equals(employee.lastName);
+        return getId() == employee.getId() && getFirstName().equals(employee.getFirstName()) && getLastName().equals(employee.getLastName());
     }
 
     @Override
     public int hashCode() {
-        int result = firstName.hashCode();
-        result = 31 * result + lastName.hashCode();
-        result = 31 * result + id;
-        return result;
+        return Objects.hash(getFirstName(), getLastName(), getId());
     }
 
     @Override
